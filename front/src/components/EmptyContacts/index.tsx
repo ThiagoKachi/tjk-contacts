@@ -27,7 +27,7 @@ export function EmptyContacts() {
           <Typography component="span" fontWeight="600" color="primary">
             ”Novo contato”
           </Typography>
-          {' '}à cima para cadastrar o seu primeiro!
+          {' '}acima para cadastrar o seu primeiro!
         </Typography>
       </Box>
 

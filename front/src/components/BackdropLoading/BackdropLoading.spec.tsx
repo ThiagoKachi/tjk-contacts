@@ -1,9 +1,14 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { BackdropLoading } from '.';
 
-describe('App tests', () => {
-  it('should contains the heading 1', () => {
-    render(<BackdropLoading isLoading />)
-    expect(1).toBe(1);
+describe('<BackdropLoading />', () => {
+  it('should show backdrop with spinner when isLoading to be true', () => {
+    const { container } = render(<BackdropLoading isLoading />)
+
+    const backdrop = container.getElementsByClassName('MuiBackdrop-root')[0];
+    const spinner = container.getElementsByClassName('MuiCircularProgress-circle')[0];
+
+    expect(backdrop).toBeInTheDocument();
+    expect(spinner).toBeInTheDocument();
   })
 })
